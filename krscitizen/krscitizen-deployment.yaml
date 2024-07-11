@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: krscitizen-deployment
+spec:
+  replicas: 1  # Number of instances (pods) to run
+  selector:
+    matchLabels:
+      app: krscitizen
+  template:
+    metadata:
+      labels:
+        app: krscitizen
+    spec:
+      containers:
+      - name: krscitizen
+        image: ganesh2soft/krscitizen:latest # Replace with your Docker image name
+        imagePullPolicy: IfNotPresent  
+        
+        ports:
+        - containerPort: 9301  # Port that your Spring Boot application listens on inside the container

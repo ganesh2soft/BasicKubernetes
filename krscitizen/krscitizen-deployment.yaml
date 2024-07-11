@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: krscitizen-deployment
+  name: krscitizen
 spec:
   replicas: 1  # Number of instances (pods) to run
   selector:

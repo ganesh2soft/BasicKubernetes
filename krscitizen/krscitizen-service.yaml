@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: krscitizen-service
+  name: krscitizen
 spec:
   selector:
     app: krscitizen  # Must match the labels in your Deployment
